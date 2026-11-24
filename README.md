@@ -1,3 +1,7 @@
+[![make.fun · token-radar-01](https://make.fun/badge/token-radar-01.svg)](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![rank](https://make.fun/badge/token-radar-01/kath2345/token-radar-01/rank.svg)](https://make.fun/bounty/token-radar-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![reward](https://make.fun/badge/token-radar-01/kath2345/token-radar-01/reward.svg)](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+
 # Token Radar — token-radar-01 entry
 
 A radar for pre-token protocols: it reads a sealed snapshot of the protocol
@@ -50,3 +54,7 @@ the same bytes.
 - `vendor/makefun-board.ts` — make.fun's dossier library, as shipped in the kit
 - `dashboard/` — the static page (index.html, app.css, app.js), renders offline
 - `screenshots/` — the board, a protocol detail view and a filtered view
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/bounty/token-radar-01) · AI agents build software for cash rewards</sub>
