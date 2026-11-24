@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Token Radar — pre-token protocols ranked by implied value</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="hero">
+  <p class="kicker">TOKEN RADAR · MODEL radar-2</p>
+  <h1>Which pre-token protocol is worth farming next?</h1>
+  <p class="lede">Every protocol below records no token — and is not a wrapped, staked or bridged
+  product of one that trades. Each is ranked by what its token would be worth if its record
+  stayed as it is, with the steps to farm it. Implied values are this radar's own claim, never
+  a prediction that a token will be issued, or when.</p>
+  <dl class="stats" id="stats"></dl>
+  <p class="asof" id="asof"></p>
+</header>
+
+<nav class="controls" aria-label="Filter and sort the board">
+  <label>Search <input id="q" type="search" placeholder="name or slug…" autocomplete="off"></label>
+  <label>Category <select id="cat"><option value="">All categories</option></select></label>
+  <label>Chain <select id="chain"><option value="">All chains</option></select></label>
+  <label class="check"><input id="wl" type="checkbox"> Watchlist only</label>
+  <label>Sort by
+    <select id="sort">
+      <option value="implied_value_usd">Implied value</option>
+      <option value="tvl_usd">TVL</option>
+      <option value="change_7d">7-day change</option>
+      <option value="age_days">Age</option>
+      <option value="name">Name</option>
+    </select>
+  </label>
+  <span class="count" id="count"></span>
+</nav>
+
+<main>
+  <section id="board-sec" aria-labelledby="board-h">
+    <h2 id="board-h">The board</h2>
+    <p class="hint">Click any row for its detail view: the model's arithmetic and the farm plan.
+    Click a column heading to sort by it.</p>
+    <div class="table-wrap">
+      <table id="board">
+        <thead><tr>
+          <th data-sort="rank">#</th>
+          <th data-sort="name">Protocol</th>
+          <th data-sort="category">Category</th>
+          <th data-sort="tvl_usd">TVL</th>
+          <th data-sort="change_7d">7d</th>
+          <th data-sort="age_days">Age</th>
+          <th data-sort="chains">Chains</th>
+          <th data-sort="implied_value_usd">Implied value</th>
+        </tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="detail" aria-labelledby="detail-h" hidden>
+    <h2 id="detail-h">Protocol detail</h2>
+    <div id="detail-body"></div>
+  </section>
+
+  <section id="live-sec" aria-labelledby="live-h">
+    <h2 id="live-h">Live tokens, set aside</h2>
+    <p class="hint">These protocols already trade. The board shows the market's own values for
+    them — never mixed into the ranking, so a traded token is never mistaken for a launch
+    still to come.</p>
+    <div class="table-wrap">
+      <table id="live">
+        <thead><tr><th>Protocol</th><th>Category</th><th>TVL</th><th>Market cap</th><th>7d</th></tr></thead>
+        <tbody id="live-rows"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="method-sec" aria-labelledby="method-h">
+    <h2 id="method-h">How the radar works</h2>
+    <div id="method"></div>
+    <p class="note">A protocol is called “pre-token” only because its DefiLlama record carries no
+    token. That record is not proof: a protocol on the list may still have a token its record
+    does not carry. Nothing here is investment advice, and no farm step asks you to pay to
+    claim anything.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Token Radar · model radar-2 · data: DefiLlama protocols snapshot, sealed 2026-11-14 ·
+  rendered offline from the snapshot, no network.</p>
+</footer>
+<script src="../data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
